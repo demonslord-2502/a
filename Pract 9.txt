@@ -1,0 +1,30 @@
+                        PRACTICAL 9
+                 (Client-Side Attacks)
+
+
+a. HTA Attack
+1: Open Kali Linux>Click on Applications>Social engineering tools
+2: Insert Command> Type "y”
+3: Select webattack with respect to number.
+4: Select “Website Attack Vectors”
+5: Select “HTA Attack Method”
+6: Copy paste the website link in front of “url to clone”.
+
+
+
+b. Exploiting Microsoft Office
+1: Install LibreOffice and John Ripper tool from the terminal.
+2: Insert Command> sudo apt install john
+3: Insert Command>sudo apt install libreoffice
+4: Explore John Ripper tool using man john command: man john
+
+Now, Create & save a docx file in an password encrypted format. In the terminal, give the path of 
+office2john.py file from john folder & also paste path of the path of the docx folder which you have 
+created and give the access by creating any text file using the below command (eg. crack.txt).
+5: Insert Command> /usr/share/john/office2john.py /home/kali/Desktop/Target1.docx > 
+crack.txt
+6: Insert Command> cat crack.txt
+Using the help command, we will get a command for cracking the password of the docx file.
+7: Insert Command> john -- h
+Crack the password using the length command. Here, we got the password which we cracked.
+8: Insert Command> john crack.txt – length=4

@@ -1,0 +1,109 @@
+                      Pract 2
+A.  Environment Variables, Tab Completion, Bash History Tricks
+= Environment Variables
+
+1. export
+2. export kali=192.168.80.132 (kali ip)
+3. ping $kali
+4. ping -c 5 $kali
+5. ping $kalipc=192.168.80.132 (kali ip)
+   ping -c 5 $kali
+
+= Tab Completion
+
+1. host 
+   hostname
+2. ifconfig
+3. sudo apt update
+
+= Bash History
+
+1. history
+
+B. Piping and Redirection, Text Searching and Manipulation
+= Piping & Predirection
+
+1. ls
+2. ls > myoutput
+   ls
+   cat myoutput
+3. wc -l crack.txt > myoutput
+   cat myoutput
+4. ls >> myoutput
+   cat myoutput
+5. wc -l  myoutput
+   wc -l < myoutput
+6. wc -l < crack.txt > myoutput
+   cat myoutput
+7. ls
+   ls | head -3
+   ls | head -3| tail -1
+8. ls | head -3| tail -1 > myoutput
+   cat myoutput
+
+=  Text Searching & Manipulation
+
+1. cd /home/kali/Desktop
+   ls
+2. cat Testing.txt
+3. grep searches Testing.txt
+4. cat Testing.txt | grep Pri
+5. cat Testing.txt | grep -i “sh”
+6. grep --h
+7. cat Testing.txt | grep “is”
+8. cat Testing.txt | grep –v “is”
+9. cat Testing.txt | grep “is\|Pri\|file”
+10. cat Testing.txt | grep [0-2]
+11. cat Testing.txt | grep [03-588]
+12. cat Testing.txt | grep “is”
+13. cat Testing.txt | grep ^is
+14. cat Testing.txt | grep –x “what is the text search command?”
+    cat Testing.txt | grep –x “what is”
+    cat Testing.txt | grep –x “anjali”
+15. cat Testing.txt | grep –r “anjali”
+16. cat Testing.txt | grep ^a.j
+    cat Testing.txt | grep ^Ris
+17. cat newfile
+    cat newfile | sed ‘s/any/of/’
+    cat newfile | sed ‘s/any/of/g’
+18. cat newfile
+    cat newfile | cut –d “,” –f2
+19. date |awk ‘{print $3,$2,$4,$9}’
+    echo “How:are:you:?” | awk –F “:” ‘{print $1,$2,$3,$4}’
+
+
+C. Editing Files from the Command Line, Comparing Files, Managing Processes
+
+= Editing Files from the Command Line
+1. cd Desktop
+   echo “Hello Everyone” > Sec.txt
+   cat Sec.txt
+   echo “what's up?” >> Sec.txt
+   cat Sec.txt
+2. touch Tool.txt
+   nano Tool.txt
+3. cat Tool.txt
+4. gedit Sec.txt
+   cat Sec.txt
+
+= Comparing Files
+1. ls
+2. diff --v 
+   diff --help
+3. diff --side-by-side Sec.txt Tool.txt
+4. diff -c Sec.txt Tool.txt
+
+= Managing Processes
+1. nmap -v -T0 hackthissite.org &
+   jobs
+   fg%1
+   nmap -v -T0 hackthissite.org &
+2. tmux
+   tmux list-sessions
+3. mux attach
+   nmap -v -T0 hackthissite.org &
+4. tmux list-sessions
+5. tmux attach
+   ps -u kali
+   nohup map -v -T0 hackthisite.org
+6. kill 10492

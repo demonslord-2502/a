@@ -1,0 +1,28 @@
+                    Pract 3
+A. Using NETCAT SoCAT
+1. sudo apt install netcat-traditional
+   nc -h
+2. Download Nmap on windows
+3. cd C:\Program Files (x86) \Nmap
+4. Open kali Linux and open Netcat. 
+   Insert command > nc 192.168.56.1 5555 to connect to windows
+
+B. PowerShell and Powercat
+Create a folder named powershell in the desktop and click on open terminal here 
+1. sudo apt install powercat
+2. sudo apt install python2
+3. python2 –m SimpleHTTPServer 80
+4. Open terminal.
+   Insert command >nc –vlp 4444
+
+C.  Wireshark and Tcpdump
+1. open terminal 
+   sudo –i
+2. tcpdump -D
+3. tcpdump –i eth0
+4. tcpdump –c 5 -i eth0
+5. tcpdump –c 5 -i eth0 -n
+6. tcpdump –c 10 -i eth0 port 443
+7. tcpdump –c 10 -i eth0 –w helpanjali
+   tcpdump –r helpanjali
+8. Open Wireshark. Try capturing from eth0 the network from “TCP” protocol.

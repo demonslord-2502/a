@@ -1,0 +1,15 @@
+        Pract 6
+(Active Information Gathering)
+
+A. DNS Enumeration
+
+1: Open Kali Linux
+2: Click on Usual Applications >01-Information Gathering > DNS Analysis > dnsenum
+3: Insert Command>dnsenum -h
+4: Insert Command> dnsenum –dnsserver 8.8.8.8 twitter.com
+
+
+
+
+
+
